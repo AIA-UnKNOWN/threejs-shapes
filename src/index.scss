@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+@import 'mixins';
+
 * {
 	margin: 0;
 	padding: 0;
@@ -34,6 +36,16 @@ $mobile-side-padding: 10px;
 	}
 
 	.shapes {
+
+		@include laptops {
+			display: grid;
+			grid-template-columns: repeat( 4, 1fr );
+		}
+
+		@include desktop {
+			display: grid;
+			grid-template-columns: repeat( 6, 1fr );
+		}
 
 		.shape {
 			background: rgb(32, 32, 32);
